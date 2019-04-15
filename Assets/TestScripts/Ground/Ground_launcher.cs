@@ -20,6 +20,13 @@ public class Ground_launcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            speed = 5f;
+            int rand = Random.Range(0, point.Length);
+            ShootPoint(point[rand], 0);
+        }
+
         if (Input.GetKeyDown(KeyCode.C))
         {
             speed = 2.5f;

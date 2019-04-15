@@ -10,7 +10,7 @@ public class TestArrow : MonoBehaviour
     private Vector3 direction;
     private float angle;
     private Vector3 prevPos;
-    public Bow_launcher luncher;
+    public Bow_launcher launcher;
     private bool colliderCheck = false;
 
     // Start is called before the first frame update
@@ -45,15 +45,15 @@ public class TestArrow : MonoBehaviour
         {
             if (collision.gameObject.tag == "10 Point")
             {
-                luncher.score += 10;
+                launcher.score += 10;
             }
             else if (collision.gameObject.tag == "5 Point")
             {
-                luncher.score += 5;
+                launcher.score += 5;
             }
             else if (collision.gameObject.tag == "1 Point")
             {
-                luncher.score += 1;
+                launcher.score += 1;
             }
             colliderCheck = true;
         }
@@ -66,15 +66,15 @@ public class TestArrow : MonoBehaviour
         {
             if (collision.gameObject.tag == "10 Point")
             {
-                luncher.score += 10;
+                launcher.score += 10;
             }
             else if (collision.gameObject.tag == "5 Point")
             {
-                luncher.score += 5;
+                launcher.score += 5;
             }
             else if (collision.gameObject.tag == "1 Point")
             {
-                luncher.score += 1;
+                launcher.score += 1;
             }
             colliderCheck = true;
         }

@@ -24,7 +24,7 @@ public class Bow_launcher : MonoBehaviour
         ArrowDir();
         if (Input.GetMouseButtonDown(0))
         {
-            arrow.GetComponent<TestArrow>().luncher = GetComponent<Bow_launcher>();
+            arrow.GetComponent<TestArrow>().launcher = GetComponent<Bow_launcher>();
             arrow.transform.position = directionTr.position;
             arrow.GetComponent<Transform>().eulerAngles = new Vector3(0, 0, directionAngle + 90);
             GameObject obj = Instantiate(arrow);

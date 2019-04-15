@@ -13,13 +13,14 @@ public class TestBullet : MonoBehaviour
 
     private void Start()
     {
+        tr = GetComponent<Transform>();
+        rig = GetComponent<Rigidbody2D>();
         collider = GetComponent<CircleCollider2D>();
         for(int i = 0; i < 4; i++)
         {
             Physics2D.IgnoreCollision(collider, wallCollider[i], true);
         }
-        tr = GetComponent<Transform>();
-        rig = GetComponent<Rigidbody2D>();
+        Physics2D.IgnoreLayerCollision(21, 21);
         StartCoroutine("ColliderCheck");
     }
 

@@ -175,7 +175,7 @@ public class AGird : MonoBehaviour
     {
         if (grid != null)
         {
-            foreach(Node n in grid)
+            foreach (Node n in grid)
             {
                 if (n.isWall)
                 {
@@ -185,7 +185,7 @@ public class AGird : MonoBehaviour
                 {
                     Gizmos.color = Color.white;
                 }
-                if(finalPath != null)
+                if (finalPath != null)
                 {
                     if (finalPath.Contains(n))
                     {
