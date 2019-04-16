@@ -5,13 +5,14 @@ using UnityEngine;
 public class Water_ball : MonoBehaviour
 {
     private Rigidbody2D rig;
+    private float result;
 
     // Start is called before the first frame update
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-        int rand = Random.Range(-9, 10);
-        transform.position = new Vector3(rand, 4.5f, 0);
+        RandomPos();
+        transform.position = new Vector3(result, 4.5f, 0);
     }
 
     // Update is called once per frame
@@ -24,5 +25,12 @@ public class Water_ball : MonoBehaviour
     {
         if (collision.gameObject.layer == 21)
             rig.mass -= 0.1f;
+    }
+
+    private void RandomPos()
+    {
+        int rand = Random.Range(-9, 9);
+        int rand2 = Random.Range(1, 5);
+        result = rand + rand2 * 0.2f;
     }
 }
